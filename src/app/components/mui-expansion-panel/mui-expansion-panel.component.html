@@ -1,0 +1,16 @@
+<mat-accordion [class]="className">
+    <mat-expansion-panel [expanded]="expanded" [disabled]="disabled" (opened)="toggleSection()"
+        (closed)="toggleSection()">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{ heading }}
+            </mat-panel-title>
+            <mat-panel-description>
+                {{secondaryHeading}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div *ngIf="expanded">
+            {{ content }}
+        </div>
+    </mat-expansion-panel>
+</mat-accordion>
